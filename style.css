@@ -1,0 +1,686 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #c0c0c0;
+}
+
+body{
+    .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+    color: black;
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+p,span,label,input,textarea,li{
+    color: black;
+    background-color: inherit;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.nav {
+    padding: 20px; /* Padding untuk memberi ruang di sekitar konten navbar */
+    margin-bottom: 20px; /* Margin bawah untuk memberi jarak dengan konten di bawahnya */
+    background-color: #f5f5dc; /* Warna latar belakang navbar */
+    border-radius: 8px; /* Membuat sudut-sudut kotak menjadi lebih melengkung */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek tiga dimensi */
+}
+
+    
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 90%;
+    }
+}
+
+/*Button*/
+.btn {
+    padding: 1rem 1.5rem;
+    background: #333333; /* Mengubah warna latar belakang tombol menjadi krem */
+    border: 1.5px solid black;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+    color: white;
+    border-radius: 5px; /* Membuat sudut tombol menjadi melengkung */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek tiga dimensi */
+}
+
+.btn:hover {
+    background-color: #656d72; /* Mengubah warna latar belakang saat tombol dihover menjadi lebih gelap */
+    border-color: #333333;
+}
+
+
+
+/*Titles*/
+.section-title{
+    margin: 1rem 0 4 rem;
+    font-size: 2rem;
+}
+
+.pre-title{
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: #656d72;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: #d9d9d9;
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Layout */
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    background-color: #ccc;
+    padding: 30px;
+    
+}
+
+
+/*Logo*/
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2 rem 0;
+    background-color: #333333;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    background-color: #333333;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    background-color:#333333;
+}
+
+.logo a{
+    color:white;
+    background-color: #333333;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+}
+ 
+nav ul li a{
+    color: white;
+    background-color:#333333;
+}
+
+/*Burger*/
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #333333;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/*Hero section*/
+#hero{
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: .5rem 0 1 rem;
+}
+
+.hero-right img{
+    width: 90%;
+}
+
+.hero-right{
+    display: flex;
+    justify-content: center;
+}
+
+/**/
+#services {
+    background-color: #fbfbfb;
+    padding: 6rem 0;
+}
+
+.services {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: inherit;
+    border: 1px solid #ccc; /* Atur gaya, lebar, dan warna border */
+    border-radius: 10px; /* Buat sudut-sudut menjadi melengkung */
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk memberi jarak antar elemen .service */
+}
+
+.services .pre-title ,.services-title {
+    margin: 0 auto;
+    background-color: inherit;
+}
+
+.services-title {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+
+/**/
+#portofolio{
+    padding: 6rem 0;
+}
+
+.portofolio{
+    border-radius: 0.7rem;
+    overflow: hidden;
+    border-color: 1px solid #f1f1f1;
+}
+
+.portofolio-cover{
+    height: 250px;
+}
+
+/* CSS */
+.portofolio {
+    position: relative;
+}
+
+.portofolio-details-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.portofolio-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portofolio-info{
+    padding: 2rem 1.5rem;
+}
+
+.portofolio-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portofolio h4{
+    font-weight: 1000;
+    font-size: 1.05rem;
+}
+
+/*popup*/
+.popup-1{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+}
+
+.popup-content-1{
+    width: 50%;
+    background-color: #f1f1f1;
+    box-shadow: 0 20px 40px black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popup-img-1{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2Px;
+}
+
+.popup-img-1 img{
+    display: block;
+    width: 100%;
+}
+
+.popup-header-1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 36px;
+}
+
+.popup-header-1 h4{
+    font-size: 30px;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+}
+
+.popup-text-1{
+    padding: 0 36px;
+    line-height: 1.4;
+    background-color: #f1f1f1;
+    margin-bottom: 2px;
+}
+
+.popup-text-1 p:not(:last-child){
+    margin-bottom: 16px;
+}
+
+#popup-1:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup-1:target .popup-content-1{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-close-1:link,
+.popup-close-1:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 1;
+    transition: all .3s;
+    background-color: #f1f1f1;
+}
+
+.popup-close-1:hover,
+.popup-close-1:active{
+    color: #555;
+}
+
+.popup-2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+}
+
+.popup-content-2{
+    width: 50%;
+    background-color: #f1f1f1;
+    box-shadow: 0 20px 40px black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popup-img-2{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2Px;
+}
+
+.popup-img-2 img{
+    display: block;
+    width: 100%;
+}
+
+.popup-header-2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 36px;
+}
+
+.popup-header-2 h4{
+    font-size: 30px;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+}
+
+.popup-text-2{
+    padding: 0 36px;
+    line-height: 1.4;
+    background-color: #f1f1f1;
+    margin-bottom: 2px;
+}
+
+.popup-text-2 p:not(:last-child){
+    margin-bottom: 16px;
+}
+
+#popup-2:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup-2:target .popup-content-2{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-close-2:link,
+.popup-close-2:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 1;
+    transition: all .3s;
+    background-color: #f1f1f1;
+}
+
+.popup-close-2:hover,
+.popup-close-2:active{
+    color: #555;
+}
+
+.popup-3{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+}
+
+.popup-content-3{
+    width: 50%;
+    background-color: #f1f1f1;
+    box-shadow: 0 20px 40px black;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.25);
+    opacity: 0;
+
+    transition: all .5s .1s;
+}
+
+.popup-img-3{
+    display: flex;
+    width: 100%;
+    margin-bottom: 2Px;
+}
+
+.popup-img-3 img{
+    display: block;
+    width: 100%;
+}
+
+.popup-header-3{
+    text-align: center;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 36px;
+}
+
+.popup-header-3 h4{
+    font-size: 30px;
+    margin-bottom: 5px;
+    background-color: #f1f1f1;
+}
+
+.popup-text-3{
+    padding: 0 36px;
+    line-height: 1.4;
+    background-color: #f1f1f1;
+    margin-bottom: 2px;
+}
+
+.popup-text-3 p:not(:last-child){
+    margin-bottom: 16px;
+}
+
+#popup-3:target{
+    opacity: 1;
+    visibility: visible;
+}
+
+#popup-3:target .popup-content-3{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-close-3:link,
+.popup-close-3:visited{
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    display: inline-block;
+    line-height: 1;
+    transition: all .3s;
+    background-color: #f1f1f1;
+}
+
+.popup-close-3:hover,
+.popup-close-3:active{
+    color: #555;
+}
+
+/* Skills & Education*/
+#skills {
+    background-color: #fbfbfb;
+    padding: 6rem 0;
+}
+
+.skills-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education{
+    display: flex;
+    gap: 1rem;
+}
+
+.education .line{
+    padding: 0 0.7rem;
+}
+
+.education .line div{
+    width: 2px;
+    height: 100%;
+    background: #f1f1f1;
+    position: relative;
+}
+
+.education-info p{
+    margin: 0.6rem 0 1.4rem;
+}
+
+.education-years{
+    margin-bottom: 3rem;
+}
+
+.education .line:before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right ul{
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/*Contact*/
+#contact{
+    padding: 0 0.7rem;
+}
+
+.contact{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div{
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #fbfbfb;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: lightgray;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+    outline: none;
+    border:1px solid lightslategray;
+}
+
+.btn-submit{
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 1%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    padding: 12px 24px; /* Sesuaikan dengan kebutuhan Anda */
+    font-size: 16px; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.btn-submit:hover{
+    background: #656d72;
+}
+
+.contact-item{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon{
+    background: #656d72;
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-item-icon svg{
+    fill:black;
+    background-color: inherit;
+}
+
+.contact-item-detail h4{
+    margin-bottom: 0.6rem;
+}
